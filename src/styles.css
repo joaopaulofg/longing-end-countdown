@@ -1,0 +1,309 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #f2f8ff;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(107, 183, 255, 0.32), transparent 32rem),
+    radial-gradient(circle at 84% 24%, rgba(7, 88, 158, 0.42), transparent 30rem),
+    linear-gradient(145deg, #06192f 0%, #0b3f72 48%, #03101f 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: clamp(0.6rem, 2vw, 1.5rem);
+}
+
+.countdown-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(165, 213, 255, 0.26);
+  border-radius: 26px;
+  background: rgba(6, 29, 56, 0.84);
+  box-shadow: 0 26px 90px rgba(0, 8, 20, 0.5);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: start;
+  padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.6rem) clamp(2rem, 4vw, 3rem);
+  background:
+    linear-gradient(90deg, rgba(4, 20, 40, 0.96), rgba(4, 20, 40, 0.58) 50%, rgba(4, 20, 40, 0.16)),
+    radial-gradient(circle at 78% 44%, rgba(124, 199, 255, 0.22), transparent 24rem);
+}
+
+.hero-title-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 2vw, 2rem);
+  align-self: start;
+  width: 100%;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0;
+  border: 1px solid rgba(165, 213, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.48rem 0.85rem;
+  color: #b9e2ff;
+  background: rgba(214, 239, 255, 0.08);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.hero h1 {
+  max-width: none;
+  margin: 0;
+  color: #f7fbff;
+  font-size: clamp(1.8rem, 3.5vw, 3.4rem);
+  line-height: 0.98;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.hero h1 span {
+  display: block;
+  color: #78c8ff;
+  text-shadow: 0 12px 34px rgba(0, 12, 28, 0.65);
+  white-space: nowrap;
+}
+
+.subtitle {
+  max-width: 76ch;
+  margin: 0;
+  color: #d5ecff;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.65;
+  text-align: left;
+}
+
+.hero-bottom {
+  display: grid;
+  align-items: start;
+}
+
+.hero-visual {
+  z-index: 3;
+  width: min(32vw, 360px);
+  min-width: 200px;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.date-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 26px 34px rgba(0, 10, 28, 0.46));
+}
+
+.countdown-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+  gap: 1rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-top: 1px solid rgba(165, 213, 255, 0.24);
+  background: rgba(217, 240, 255, 0.07);
+}
+
+.feature-photo,
+.timer-column {
+  min-width: 0;
+}
+
+.feature-photo {
+  min-height: clamp(360px, 42vw, 480px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(165, 213, 255, 0.28);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(224, 244, 255, 0.1), rgba(8, 72, 126, 0.28)),
+    rgba(3, 19, 38, 0.58);
+}
+
+.feature-photo img,
+.feature-photo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: rgba(3, 19, 38, 0.62);
+}
+
+.timer-column {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.timer-header {
+  min-width: 0;
+}
+
+.field-label {
+  margin: 0;
+  color: #bde6ff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.timer-header h2 {
+  margin: 0.35rem 0 0;
+  color: #f7fbff;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.countdown-card {
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(165, 213, 255, 0.3);
+  border-radius: 18px;
+  background: rgba(3, 19, 38, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.countdown-card strong {
+  color: #eaf7ff;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-card span {
+  color: rgba(213, 236, 255, 0.74);
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.photo-strip {
+  min-height: 230px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.8rem;
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  object-fit: cover;
+  border: 1px solid rgba(165, 213, 255, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(0, 8, 20, 0.32);
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .countdown-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 0;
+    row-gap: 1.25rem;
+  }
+
+  .hero-title-row {
+    padding-right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero h1 span {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(86vw, 460px);
+    min-height: 190px;
+    justify-self: center;
+    order: -1;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .countdown-shell {
+    border-radius: 20px;
+  }
+
+  .hero-visual {
+    width: min(90vw, 340px);
+    min-height: 180px;
+  }
+
+  .date-image {
+    max-height: 220px;
+  }
+
+  .countdown-card {
+    min-height: 112px;
+    border-radius: 16px;
+  }
+
+  .photo-strip {
+    grid-template-columns: 1fr;
+  }
+}
