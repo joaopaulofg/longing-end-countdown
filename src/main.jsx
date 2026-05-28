@@ -73,7 +73,7 @@ function App() {
 
           <div className="hero-bottom">
             <p className="subtitle">
-              Maria Heloisa vai pegar o voo em SP e está vindo para casa! 🥳
+              Maria Heloisa vai pegar o voo em SP e vem para casa! 🥳
               Depois de mais de 1 ano sem te ver, (espero) que finalmente nós vamos matar a saudade e aproveitar muito juntos! ❤️
             </p>
           </div>
