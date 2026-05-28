@@ -240,6 +240,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .countdown-panel {
+    align-items: start;
+  }
+
   .hero {
     min-height: 0;
     row-gap: 1.25rem;
@@ -282,6 +286,25 @@ textarea {
   .countdown-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .feature-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .timer-column {
+    grid-template-rows: auto auto auto;
+  }
+
+  .photo-strip {
+    min-height: 0;
+  }
+
+  .photo-strip img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
 }
 
 @media (max-width: 520px) {
@@ -305,5 +328,6 @@ textarea {
 
   .photo-strip {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
